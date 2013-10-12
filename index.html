@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<title>popfilter: pop radio gone wrong</title>
+<link rel="stylesheet" type="text/css" href="popfilter.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script type="text/javascript" src="popfilter.js"></script>
+
+<script type="text/javascript" src="http://chonked.appspot.com/"></script>
+
+<script type="text/javascript">
+var radio;
+function onYouTubeIframeAPIReady() {
+  radio = new Player();
+}
+
+$(function() {
+  $('#playbutton').click(function() {
+    if($('#playbutton').text() == "\u25b6") {
+      radio.play();
+      $('#playbutton').text("\u275a\u275a");
+    } else {
+      radio.pause();
+      $('#playbutton').text("\u25b6");
+    }
+  });
+
+  $('#hd1').click(function() {
+    $('#hd1').css('font-weight', '700');
+    $('#hd2').css('font-weight', '400');
+    radio.tune_to('hd1');
+  });
+
+  $('#hd2').click(function() {
+    $('#hd1').css('font-weight', '400');
+    $('#hd2').css('font-weight', '700');
+    radio.tune_to('hd2');
+  });
+});
+</script>
+
+<ul id="channels">
+	<li><a id="hd1" href="#">Backwards</a></li>
+	<li><a id="hd2" href="#">Wordless</a></li>
+</ul>
+
+<h1><span>Pop</span>Filter</h1>
+
+<div id="controls">
+	<a id="playbutton" href="#">&#x25b6;</a>
+	<p id="artist">&nbsp;</p>
+	<p id="song">&nbsp;</p>
+</div>
+
+<p id="explanation">A pastiche of your local Top 40 station conveyed
+in two channels: one lacking all lyrics, and the
+other entirely backwards.</p>
+
+<p id="footer">v2.0 (steinbro 20131008)</p>
+
+<div id="player">&nbsp;</div>
+

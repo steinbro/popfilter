@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+
+* { padding: 0; margin: 0; border: 0; }
+
+body {
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	width: 35%;
+	margin: 3em auto;
+}
+
+h1 {
+	text-transform: lowercase;
+	color: rgba(255, 123, 0, 0.8);	
+}
+
+h1 span {
+	color: rgb(60, 3, 56);
+}
+
+#controls {
+	color: rgb(60, 3, 56);
+	padding: 0.6em 1em;
+	margin: 1em 0;
+	background-color: rgba(255, 123, 0, 0.1);
+}
+
+#artist {
+	font-weight: 700;
+}
+
+#playbutton {
+	float: left;
+	font-size: 2em;
+	width: 1.3em;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(60, 3, 56);
+}
+
+a:hover {
+	color: rgba(255, 123, 0, 0.8);	
+}
+
+ul#channels {
+	float: right;
+	list-style: none;
+	text-transform: lowercase;
+	margin-top: 0em;
+}
+
+ul#channels li {
+	display: inline;
+	text-align: right;
+	font-size: 0.8em;
+	line-height: 3em;
+	padding: 0.5em;
+}
+
+ul#channels li a#hd1 {
+	font-weight: 700;
+}
+
+p#explanation {
+	color: rgba(60, 3, 56, 0.8);
+	font-size: 0.75em;
+	line-height: 1.5em;
+	margin: 2em 0 1.5em;
+}
+
+p#footer {
+	color: rgba(60, 3, 56, 0.5);
+	font-size: 0.75em;
+	text-align: right;
+}
+
+ul#test-results {
+	font-size: 0.8em;
+	list-style: none;
+	margin: 2em 0;
+	line-height: 1.875em;
+}
